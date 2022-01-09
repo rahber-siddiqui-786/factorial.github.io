@@ -1,0 +1,102 @@
+<html>
+
+<head>
+
+    <title>Factorial</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: lightgreen;
+        }
+
+     
+
+        .container {
+            height: 20rem;
+            width: 30rem;
+            box-shadow: 0 0 10px black;
+            padding: 5rem 5rem 0rem 5rem;
+            margin: 10rem auto;
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+            background-color: lightgrey;
+
+        }
+
+         input {
+            height: 2.5rem;
+            width: 20rem;
+            border-radius: 5px;
+            border: none;
+            padding: 1rem;
+        }
+    
+        button {
+            height: 2.5rem;
+            width: 8rem;
+            border-radius: 10px;
+            border: none;
+            text-transform: uppercase;
+            color: white;
+            background-color: blue;
+            letter-spacing: 2px;
+
+        }
+
+        p {
+            height: 27px;
+            width: 500px;
+            text-decoration: solid;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: darkblue;
+            font-size: 25px;
+
+
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-family: sans-serif;
+            font-weight: 100;
+            letter-spacing: 3px;
+        } 
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Factorial Calculator</h1>
+        <div class="content">
+            <input type="number" id="input" placeholder="Enter number">
+            <button class="btn" onclick="fn()">Factorial</button>
+        </div>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function fn() {
+            let inputref = document.getElementById("input").value;
+            let result = document.getElementById("result");
+            result.innerText = fact(inputref);
+        }
+        function fact(a) {
+
+            if (a <= 1) {
+                return 1;
+            }
+            return a * fact(a - 1);
+
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>
